@@ -1,0 +1,30 @@
+<div class="container py-4">
+    </header>
+
+    <div class="p-5 mb-4 bg-light rounded-3">
+        <div class="container-fluid py-5">
+            <h1 class="display-5 fw-bold">Bem-vindo ao Blog do Node</h1>
+            <p class="col-md-15 fs-4">Este é um BLOG simples, desenvolvido com Node js + Express + MongoDB.</p>
+            <hr>
+            <p>Aqui você vai poder ler sobre as novidades do mundo da computação.</p>
+            <a class="btn btn-primary" href="/usuarios/registro" role="button">Crie sua conta</a>
+        </div>
+    </div>
+</div>
+<hr>
+<h2>Postagens recentes:</h2>
+
+{{#each postagens}}
+<div class="card mt-4">
+    <div class="card-body">
+        <h3>{{titulo}}</h3>
+        <p>{{descricao}}</p>
+        <a href="/postagem/{{slug}}"><button class="btn btn-success">Leia mais</button></a>
+        <hr>
+        <small>Categoria: {{categoria.nome}}</small><br>
+        <small>Data de públicação: {{data}}</small>
+    </div>
+</div>
+{{else}}
+<h5>Nenhuma postagem</h5>
+{{/each}}
