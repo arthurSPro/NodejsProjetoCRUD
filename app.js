@@ -18,7 +18,7 @@ require("./config/auth")(passport)
 const db = require("./config/db")
 
 // Configurações
-
+// Login:admin@mail.com     Senha:123456
 // Sessão
 app.use(session({
     secret: "random",
